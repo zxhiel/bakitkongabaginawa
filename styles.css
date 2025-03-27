@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ade3eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #8dcdf4;
+    background-color: solid;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Limit the width for better readability */
+}
+
+.heart {
+    font-size: 50px;
+    color: rgb(34, 90, 204);
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.message {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2b2929;
+    display: none; /* Initially hidden */
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.message.show {
+    display: block; /* Show the message */
+    opacity: 3; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
